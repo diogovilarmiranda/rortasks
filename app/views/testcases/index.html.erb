@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <p id="notice"><%= notice %></p>
 
 <h1>Listing Testcases</h1>
@@ -18,6 +19,7 @@
 
   <tbody>
     <% @testcases.each do |testcase| %>
+      
       <tr>
         <td><%= testcase.code %></td>
         <td><%= testcase.title %></td>

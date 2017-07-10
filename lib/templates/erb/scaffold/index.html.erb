@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <p id="notice"><%%= notice %></p>
 
 <h1>Listing <%= plural_table_name.titleize %></h1>
@@ -14,7 +15,10 @@
 
   <tbody>
     <%% @<%= plural_table_name %>.each do |<%= singular_table_name %>| %>
-      <tr>
+      
+      <% if singular_table_name == "bug" or singular_table_name == "issue" or singular_table_name == "product" or singular_table_name == "campaign"-%><tr class="w3-hover-green">
+  <% else -%><tr><% end -%>
+
 <% attributes.reject(&:password_digest?).each do |attribute| -%>
         <td><%%= <%= singular_table_name %>.<%= attribute.name %> %></td>
 <% end -%>

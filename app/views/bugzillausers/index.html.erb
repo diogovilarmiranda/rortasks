@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <p id="notice"><%= notice %></p>
 
 <h1>Listing Bugzillausers</h1>
@@ -19,6 +20,7 @@
 
   <tbody>
     <% @bugzillausers.each do |bugzillauser| %>
+      
       <tr>
         <td><%= bugzillauser.loginname %></td>
         <td><%= bugzillauser.realname %></td>

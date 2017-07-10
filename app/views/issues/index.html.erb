@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <p id="notice"><%= notice %></p>
 
 <h1>Listing Issues</h1>
@@ -27,7 +28,9 @@
 
   <tbody>
     <% @issues.each do |issue| %>
-      <tr>
+      
+      <tr class="w3-hover-green">
+  
         <td><%= issue.code %></td>
         <td><%= issue.project %></td>
         <td><%= issue.issuetype %></td>

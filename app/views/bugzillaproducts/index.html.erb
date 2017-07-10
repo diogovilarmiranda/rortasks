@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <p id="notice"><%= notice %></p>
 
 <h1>Listing Bugzillaproducts</h1>
@@ -25,6 +26,7 @@
 
   <tbody>
     <% @bugzillaproducts.each do |bugzillaproduct| %>
+      
       <tr>
         <td><%= bugzillaproduct.code %></td>
         <td><%= bugzillaproduct.product %></td>

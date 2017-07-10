@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <p id="notice"><%= notice %></p>
 
 <h1>Listing Bugs</h1>
@@ -34,7 +35,9 @@
 
   <tbody>
     <% @bugs.each do |bug| %>
-      <tr>
+      
+      <tr class="w3-hover-green">
+  
         <td><%= bug.code %></td>
         <td><%= bug.product %></td>
         <td><%= bug.component %></td>
