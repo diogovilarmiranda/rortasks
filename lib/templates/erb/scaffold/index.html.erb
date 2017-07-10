@@ -1,6 +1,32 @@
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <p id="notice"><%%= notice %></p>
 
 <h1>Listing <%= plural_table_name.titleize %></h1>
+
+
+<% if singular_table_name == "testcase" or singular_table_name == "quiz" or singular_table_name == "course" -%>
+
+<ul class="w3-ul w3-hoverable">
+ 
+    <%% @<%= plural_table_name %>.each do |<%= singular_table_name %>| %>
+      <li class="w3-border">
+        <% attributes.reject(&:password_digest?).each do |attribute| -%>
+
+          <%% if <%= singular_table_name %>.<%= attribute.name %>.present? -%>
+                <p> <span class="w3-tag w3-blue"><%%= <%= singular_table_name %>.<%= attribute.name %> %></span></p>
+          <%% end -%>
+
+
+        <% end -%>
+          <td><%%= link_to 'Show', <%= singular_table_name %> %></td>
+          <td><%%= link_to 'Edit', edit_<%= singular_table_name %>_path(<%= singular_table_name %>) %></td>
+          <td><%%= link_to 'Destroy', <%= singular_table_name %>, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </li>    
+    <%% end %>
+  
+</ul>
+
+<% else -%>
 
 <table>
   <thead>
@@ -25,6 +51,10 @@
     <%% end %>
   </tbody>
 </table>
+
+<% end -%>
+
+
 
 <br>
 
